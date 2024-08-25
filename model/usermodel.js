@@ -7,7 +7,7 @@ const userSchema=new mongoose.Schema({
         required:true,
         unique:true
     },
-    pasword:{
+    password:{
         type:String,
         required:true
     },
@@ -19,6 +19,9 @@ const userSchema=new mongoose.Schema({
     role:{
         type:String,
         enum:["Admin","Student","Visitor"]
+    },
+    token:{
+        type:String
     }
 },{timestamps:true})
 
